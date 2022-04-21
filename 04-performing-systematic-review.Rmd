@@ -1,6 +1,8 @@
-# Systematic literature searching
+# Systematic reviews
 
-## Developing search terms 
+## Systematic searching
+
+### Developing search terms 
 
 Developing optimal search terms to identify all potentially relevant studies is a hugely important step in your systematic review. A few resources to help you with this process are highlighted below: 
 
@@ -15,7 +17,7 @@ Use the Advanced Search builder on [Pubmed](https://www.ncbi.nlm.nih.gov/pubmed/
 In some cases, with very large numbers of records Endnote may crash. If this happens, filter by Year in PubMed to split the records into smaller file sizes (e.g. 5,000 records) and import each one separately.
 
 
-## Downloading references from  Web of Science to Endnote
+### Downloading references from  Web of Science to Endnote
 
 Log in to WOS [here](https://www.ed.ac.uk/information-services/help-consultancy/archive-for-usd-container/web-of-science)
 
@@ -38,8 +40,21 @@ Finally, insert a row above the column names with `*Generic` in cell `A1`. Save 
 
 Now, go to Endnote and import the file by going to `File` -> `Import` -> `File` and selecting Import option `Tab Delimited`. Before improting, select `UTF-8` for text-translation, and `Import All duplicates`.
 
-## Downloading references from EMBASE to Endnote
+### Downloading references from EMBASE to Endnote
 
 Log in to Embase [here](https://www.ed.ac.uk/information-services/help-consultancy/archive-for-usd-container/embase)
 
 In the `Range` field, enter 1-5000 to download 5000 records at a time (or whichever limit your institution allows). *Do not* click `Go` and instead click `Export`. Export references in Endnote format and once downloaded, click the file to import into Endnote automatically. Alternatively, right click the file and select `Endnote` under the `Open with...` list. 
+
+# Dealing with duplicate citations 
+
+If you conduct a systematic search across multiple databases, you will need to remove duplicate records - e.g. the same record which has been identified in several databases. This is not a straightforward task, as the same record may differ slightly in title, authors, and other reference information due to the way it has been indexed in different databases. Endnote is a popular tool for duplicate removal, however there is evidence that it is not sufficient and misses many duplicates. 
+
+## Deduplication
+
+### Deduplication using ASySD (Automated Systematic Search Deduplication Tool)
+
+The [ASySD tool](https://camarades.shinyapps.io/RDedup/) was developed within CAMARADES to address this problem automatically remove duplicate references. First, export your records as an .XML file from Endnote and upload to ASySD. Next, move to the next "Deduplication" tab to remove duplicate records. There is also an option of completing manual deduplication (where the algorithm detects pairs of records which *might* be duplicates). Follow the instructions on the application to select the IDs of records you wish to remove from any pair and click to remove records from dataset when complete. On the final tab, you can download your unique systematic search dataset in multiple formats. We recommend downloading the Endnote tab delimited (.txt) file and importing to a new Endnote library. 
+
+
+

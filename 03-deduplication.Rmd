@@ -1,9 +1,0 @@
-# Dealing with duplicate citations 
-
-If you conduct a systematic search across multiple databases, you will need to remove duplicate records - e.g. the same record which has been identified in several databases. This is not a straightforward task, as the same record may differ slightly in title, authors, and other reference information due to the way it has been indexed in different databases. Endnote is a popular tool for duplicate removal, however there is evidence that it is not sufficient and misses many duplicates. 
-
-## Deduplication using ASySD (Automated Systematic Search Deduplication Tool)
-
-The [ASySD tool](https://camarades.shinyapps.io/RDedup/) was developed within CAMARADES to address this problem automatically remove duplicate references. First, export your records as an .XML file from Endnote and upload to ASySD. Next, move to the next "Deduplication" tab to remove duplicate records. There is also an option of completing manual deduplication (where the algorithm detects pairs of records which *might* be duplicates). Follow the instructions on the application to select the IDs of records you wish to remove from any pair and click to remove records from dataset when complete. On the final tab, you can download your unique systematic search dataset in multiple formats. We recommend downloading the Endnote tab delimited (.txt) file and importing to a new Endnote library. 
-
-
