@@ -1,4 +1,4 @@
-language: R
+anguage: R
 cache:                          # optional
   packages: true                # optional
   directories: _bookdown_files  # optional
