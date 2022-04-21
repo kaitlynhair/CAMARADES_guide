@@ -4,18 +4,18 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>Chapter 3 Literature | A Minimal Book Example</title>
+  <title>Chapter 3 Systematic literature searching | A Minimal Book Example</title>
   <meta name="description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="generator" content="bookdown 0.26 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="Chapter 3 Literature | A Minimal Book Example" />
+  <meta property="og:title" content="Chapter 3 Systematic literature searching | A Minimal Book Example" />
   <meta property="og:type" content="book" />
   
   <meta property="og:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   <meta name="github-repo" content="rstudio/bookdown-demo" />
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Chapter 3 Literature | A Minimal Book Example" />
+  <meta name="twitter:title" content="Chapter 3 Systematic literature searching | A Minimal Book Example" />
   
   <meta name="twitter:description" content="This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook." />
   
@@ -30,8 +30,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="hello-bookdown.html"/>
-<link rel="next" href="methods.html"/>
+<link rel="prev" href="welcome.html"/>
+<link rel="next" href="dealing-with-duplicate-citations.html"/>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -138,14 +138,15 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 <li class="divider"></li>
 <li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Prerequisites</a></li>
-<li class="chapter" data-level="2" data-path="hello-bookdown.html"><a href="hello-bookdown.html"><i class="fa fa-check"></i><b>2</b> Hello bookdown</a><ul>
-<li class="chapter" data-level="2.1" data-path="hello-bookdown.html"><a href="hello-bookdown.html#a-section"><i class="fa fa-check"></i><b>2.1</b> A section</a><ul>
-<li class="chapter" data-level="" data-path="hello-bookdown.html"><a href="hello-bookdown.html#an-unnumbered-section"><i class="fa fa-check"></i>An unnumbered section</a></li>
+<li class="chapter" data-level="2" data-path="welcome.html"><a href="welcome.html"><i class="fa fa-check"></i><b>2</b> Welcome</a></li>
+<li class="chapter" data-level="3" data-path="systematic-literature-searching.html"><a href="systematic-literature-searching.html"><i class="fa fa-check"></i><b>3</b> Systematic literature searching</a><ul>
+<li class="chapter" data-level="3.1" data-path="systematic-literature-searching.html"><a href="systematic-literature-searching.html#developing-search-terms"><i class="fa fa-check"></i><b>3.1</b> Developing search terms</a></li>
+<li class="chapter" data-level="3.2" data-path="systematic-literature-searching.html"><a href="systematic-literature-searching.html#downloading-references-from-pubmed-to-endnote"><i class="fa fa-check"></i><b>3.2</b> Downloading references from PubMed to Endnote</a></li>
+<li class="chapter" data-level="3.3" data-path="systematic-literature-searching.html"><a href="systematic-literature-searching.html#downloading-references-from-web-of-science-to-endnote"><i class="fa fa-check"></i><b>3.3</b> Downloading references from Web of Science to Endnote</a></li>
+<li class="chapter" data-level="3.4" data-path="systematic-literature-searching.html"><a href="systematic-literature-searching.html#downloading-references-from-embase-to-endnote"><i class="fa fa-check"></i><b>3.4</b> Downloading references from EMBASE to Endnote</a></li>
 </ul></li>
-</ul></li>
-<li class="chapter" data-level="3" data-path="literature.html"><a href="literature.html"><i class="fa fa-check"></i><b>3</b> Literature</a></li>
-<li class="chapter" data-level="4" data-path="methods.html"><a href="methods.html"><i class="fa fa-check"></i><b>4</b> Methods</a><ul>
-<li class="chapter" data-level="4.1" data-path="methods.html"><a href="methods.html#math-example"><i class="fa fa-check"></i><b>4.1</b> math example</a></li>
+<li class="chapter" data-level="4" data-path="dealing-with-duplicate-citations.html"><a href="dealing-with-duplicate-citations.html"><i class="fa fa-check"></i><b>4</b> Dealing with duplicate citations</a><ul>
+<li class="chapter" data-level="4.1" data-path="dealing-with-duplicate-citations.html"><a href="dealing-with-duplicate-citations.html#deduplication-using-asysd-automated-systematic-search-deduplication-tool"><i class="fa fa-check"></i><b>4.1</b> Deduplication using ASySD (Automated Systematic Search Deduplication Tool)</a></li>
 </ul></li>
 <li class="chapter" data-level="5" data-path="applications.html"><a href="applications.html"><i class="fa fa-check"></i><b>5</b> Applications</a><ul>
 <li class="chapter" data-level="5.1" data-path="applications.html"><a href="applications.html#example-one"><i class="fa fa-check"></i><b>5.1</b> Example one</a></li>
@@ -173,18 +174,55 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="literature" class="section level1 hasAnchor">
-<h1><span class="header-section-number">Chapter 3</span> Literature<a href="literature.html#literature" class="anchor-section" aria-label="Anchor link to header"></a></h1>
-<p>Here is a review of existing methods.</p>
+<div id="systematic-literature-searching" class="section level1 hasAnchor">
+<h1><span class="header-section-number">Chapter 3</span> Systematic literature searching<a href="systematic-literature-searching.html#systematic-literature-searching" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<div id="developing-search-terms" class="section level2 hasAnchor">
+<h2><span class="header-section-number">3.1</span> Developing search terms<a href="systematic-literature-searching.html#developing-search-terms" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Developing optimal search terms to identify all potentially relevant studies is a hugely important step in your systematic review. A few resources to help you with this process are highlighted below:</p>
+<ul>
+<li><p><a href="https://journals.sagepub.com/doi/full/10.1258/la.2011.011087">Step-by-step guide</a>for identifying preclinical animal studies from our collaborators, SyRCLE</p></li>
+<li><p>This <a href="https://utas.libguides.com/SystematicReviews/SearchStrategies#:~:text=%20These%20are%20the%20steps%20required%20when%20developing,different%20databases%2011%20Final%20search%20strategy%20More%20">useful resource</a> from the University of Tasmania</p></li>
+</ul>
+</div>
+<div id="downloading-references-from-pubmed-to-endnote" class="section level2 hasAnchor">
+<h2><span class="header-section-number">3.2</span> Downloading references from PubMed to Endnote<a href="systematic-literature-searching.html#downloading-references-from-pubmed-to-endnote" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Use the Advanced Search builder on <a href="https://www.ncbi.nlm.nih.gov/pubmed/">Pubmed</a> to search for relevant records. <code>Send to</code> Citation manager to import into Endnote directly. If you have &gt;10,000 records, you will have to do this multiple times.</p>
+<p>In some cases, with very large numbers of records Endnote may crash. If this happens, filter by Year in PubMed to split the records into smaller file sizes (e.g. 5,000 records) and import each one separately.</p>
+</div>
+<div id="downloading-references-from-web-of-science-to-endnote" class="section level2 hasAnchor">
+<h2><span class="header-section-number">3.3</span> Downloading references from Web of Science to Endnote<a href="systematic-literature-searching.html#downloading-references-from-web-of-science-to-endnote" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Log in to WOS <a href="https://www.ed.ac.uk/information-services/help-consultancy/archive-for-usd-container/web-of-science">here</a></p>
+<p>To export up to 500 records at a time, select <code>Export</code> and <code>Endnote desktop</code>. Alternatively, the option may be available to you via your institution to download 5000 references at a time. If possible, select this option and download to a tab deliminted format. Once downloaded, you will need to import into excel to perform some data cleaning and formatting. In excel, select <code>Data</code> and <code>From text</code> to import the .txt file. The column headers must be changed to the following:</p>
+<ul>
+<li>PT - Reference Type</li>
+<li>AU - Author</li>
+<li>TI - Title</li>
+<li>SO - Secondary Title</li>
+<li>UT - Accession Number</li>
+<li>PD - Date</li>
+<li>PY - Year</li>
+<li>VL - Volume</li>
+<li>IS - Number</li>
+<li>TC (citation count) - If you want to keep this or any others call them Custom 1, Custom 2.. etc.</li>
+</ul>
+<p>For pages, you need to create a new column in excel called <code>Pages</code>. Enter a foruma that will add the contents of the <code>BP</code> (beginning page) and <code>EP</code> (ending page) columns with a “-” in the middle e.g. <code>=E1&amp;"-"&amp;F1"</code> and paste down the column length. Once complete, copy paste this column and ensure it is pasted as the values, so you can delete the <code>BP</code> and <code>EP</code> columns.</p>
+<p>Finally, insert a row above the column names with <code>*Generic</code> in cell <code>A1</code>. Save as a tab delimited text file. Open up in Notepad and remove any tabs after the <code>*Generic</code> so that <code>Reference Type</code> begins on a new line but with no tabs in between.</p>
+<p>Now, go to Endnote and import the file by going to <code>File</code> -&gt; <code>Import</code> -&gt; <code>File</code> and selecting Import option <code>Tab Delimited</code>. Before improting, select <code>UTF-8</code> for text-translation, and <code>Import All duplicates</code>.</p>
+</div>
+<div id="downloading-references-from-embase-to-endnote" class="section level2 hasAnchor">
+<h2><span class="header-section-number">3.4</span> Downloading references from EMBASE to Endnote<a href="systematic-literature-searching.html#downloading-references-from-embase-to-endnote" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Log in to Embase <a href="https://www.ed.ac.uk/information-services/help-consultancy/archive-for-usd-container/embase">here</a></p>
+<p>In the <code>Range</code> field, enter 1-5000 to download 5000 records at a time (or whichever limit your institution allows). <em>Do not</em> click <code>Go</code> and instead click <code>Export</code>. Export references in Endnote format and once downloaded, click the file to import into Endnote automatically. Alternatively, right click the file and select <code>Endnote</code> under the <code>Open with...</code> list.</p>
 
+</div>
 </div>
             </section>
 
           </div>
         </div>
       </div>
-<a href="hello-bookdown.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="methods.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="welcome.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="dealing-with-duplicate-citations.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
@@ -215,7 +253,7 @@ gitbook.start({
 "size": 2
 },
 "edit": {
-"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-literature.Rmd",
+"link": "https://github.com/rstudio/bookdown-demo/edit/master/02-systematic-search.Rmd",
 "text": "Edit"
 },
 "history": {

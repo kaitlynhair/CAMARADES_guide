@@ -1,9 +1,12 @@
 prerequisites
-hello-bookdown
-a-section
-literature
-methods
-math-example
+welcome
+systematic-literature-searching
+developing-search-terms
+downloading-references-from-pubmed-to-endnote
+downloading-references-from-web-of-science-to-endnote
+downloading-references-from-embase-to-endnote
+dealing-with-duplicate-citations
+deduplication-using-asysd-automated-systematic-search-deduplication-tool
 applications
 example-one
 example-two
