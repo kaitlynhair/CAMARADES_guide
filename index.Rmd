@@ -1,6 +1,6 @@
 --- 
-title: "A Minimal Book Example"
-author: "Kaitlyn Hair"
+title: "CAMARADES Cookbook"
+author: "CAMARADES Edinburgh"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 output: bookdown::gitbook
@@ -11,5 +11,6 @@ link-citations: yes
 github-repo: rstudio/bookdown-demo
 description: "This is the CAMARADES Edinburgh lab guide."
 ---
+# Hello World
 
 
