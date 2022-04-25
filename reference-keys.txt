@@ -1,5 +1,16 @@
-hello-world
 welcome
+our-missions
+our-strategies
+getting-started
+camarades
+translational-failure
+why-systematic-reviews
+using-syrf
+systematic-review-methodology
+data-skills
+r
+meta-analysis
+data-visualisation
 file-management
 systematic-reviews
 systematic-searching
@@ -11,4 +22,4 @@ dealing-with-duplicate-citations
 deduplication
 deduplication-using-asysd-automated-systematic-search-deduplication-tool
 interpreting-sr-data
-meta-analysis
+meta-analysis-1
