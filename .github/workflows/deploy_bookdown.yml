@@ -19,8 +19,6 @@ jobs:
       - name: Render Book
         run: Rscript -e 'bookdown::render_book("index.Rmd")'
       - uses: actions/upload-artifact@v1
-        env: 
-          GITHUB_PAT: ${{ secrets.GH_PAT }}
         with:
           name: _book
           path: _book/

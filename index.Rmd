@@ -13,6 +13,7 @@ description: "This is the CAMARADES Edinburgh lab guide."
 ---
 ```{r include=FALSE}
 install.packages("fontawesome")
+library(fontawesome)
 ```
 
 # Welcome
