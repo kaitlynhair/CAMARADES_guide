@@ -1,0 +1,11 @@
+# Automation
+
+## Background
+
+## Automating searches
+## Automating deduplication
+## Automating screening
+## Automating data extraction
+## SOLES projects
+
+
