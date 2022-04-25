@@ -23,7 +23,7 @@ The team collaborates with researchers all around the world, including meta-rese
 knitr::include_graphics("images/camarades_logo.jpg")
 ```
 
-## Our missions:
+## Our missions
 - Improve the validity of preclinical research  
 - Increase the value of preclinical research  
 - Improve translation from preclinical research to the clinic  
