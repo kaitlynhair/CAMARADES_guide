@@ -1,2 +1,43 @@
 # File management
 
+We aim for data organisation to be clear and as consistent as possible between projects – to help with locating files, prevent data loss, and ensure that data can be findable, accessible, and used/re-used (both by yourself and others in the team). This is especially important for living systematic reviews and projects which may be transferred from one owner to another. 
+
+To ensure consistent data organisation across CAMARADES projects, we recommend following the principles below: 
+
+## Standardise folder management for each project. 
++	All CAMARADES Edinburgh SR Projects should use [CAMARADES SharePoint](https://uoe.sharepoint.com/sites/Camarades125) as their primary location for data storage. 
+
++	Each SR project should have one parent folder within [SystematicReviewProjects](https://uoe.sharepoint.com/:f:/r/sites/Camarades125/Shared%20Documents/SystematicReviewProjects?csf=1&web=1&e=84D2fv) folder in Documents. Use the folder template in [SRProjectFolderTemplate](https://uoe.sharepoint.com/:f:/r/sites/Camarades125/Shared%20Documents/SystematicReviewProjects/Administration/SRProjectFolderTemplate?csf=1&web=1&e=fOphe9) to organise your folders and files. Go to [SystematicReviewProjects > Administration](https://uoe.sharepoint.com/:f:/r/sites/Camarades125/Shared%20Documents/SystematicReviewProjects/Administration?csf=1&web=1&e=cXh8bh), click on the ⋮ next to SRProjectTemplate and select "Copy to". Navigate to CAMARADES > Documents > SystematicReviewProjects and click "Copy Here". Go back to [SystematicReviewProjects](https://uoe.sharepoint.com/:f:/r/sites/Camarades125/Shared%20Documents/SystematicReviewProjects?csf=1&web=1&e=84D2fv) and rename the copied folder to your project name in [PascalCase](https://techterms.com/definition/pascalcase). 
+
++	The template folder contains subfolders to manage your files according to components of the systematic review process (e.g. 01Protocol, 02DatabaseSearch etc). For folders where there could be multiple versions of the same file (e.g. protocol), store the active version in the main folder, and previous versions in a folder named “archive” with files named using the convention specified in section [3.3](##	Follow naming conventions). 
+
++	Structure for folders involving R programming: 
+    *	“data” folder – store all your data used in your scripts here and read from it. 
+    *	“output” folder – write files to this folder; you may subcategorise by type of files (e.g., csv, figures), or by date created  
+    *	Main script .R file(s); annotate steps in your R scripts so that others can understand and use it. If writing functions, for each function, annotate (i) purpose of the function, (ii) input variables (including type of variable), (iii) what does the function returns.
+    * If there are multiple .R files within a folder, include a README file that summarises purpose for each script.
+
++ Store .Rproj  (and an “R” folder (optional) to store ‘configure.R’ files containing configuration info shared across scripts for the project +/-  scripts containing functions which will be called by different scripts across the project) in the parent directory. 
+
+##	Maintain a living project document per project
+Use the template located within [SRProjectTemplate > 00Master > CAMARADESSystematicReviewLivingDocument.docx](https://uoe.sharepoint.com/:w:/r/sites/Camarades125/Shared%20Documents/SystematicReviewProjects/Administration/SRProjectFolderTemplate/00Master/CAMARADESSystematicReviewLivingDocument.docx?d=w70bbf8d9b5c043528696aa8ebc1014db&csf=1&web=1&e=gSws7t) to document project level metadata. Save a copy of the document as YourProjectNameLivingDocument.docx (e.g. "StrokeInVivoRoBLivingDocument.docx") and store this within your “00Master” folder. Populate the fields in the document and keep this up to date.  Do not alter the column names of the table on the first page. Keep this document up-to-date and store a current copy of the document in [CAMARADES Edinburgh Systematic Review Projects Organisation OSF repository](https://osf.io/zefa9/); drag and drop the file into the “LivingDocument” folder). We will programmatically extract data from the table to update the [CAMARADES SR project overview summary table](https://osf.io/smr34/). 
+
+##	Follow naming conventions
++	Names should be concise and provide context (avoid generic names)
++	Use [PascalCase](https://techterms.com/definition/pascalcase) (where the first letter of each compound word in a variable is capitalised) 
++	Do not use special characters or spaces. Use PascalCase; dashes or underscores can be used.
++	Where dates are important, or there would be multiple versions of a document, use YYYY-MM-DDYourProjectNameFileNameVersionNumber for name. For example, 
+“2022-03-22SRProjectProtocolV1.docx”. This enables easy chronological sorting of files. 
++	Where files are used sequentially in a specific order, for example R script files used in a workflow, add a number prefix to the filename. For example,
+“01CleanData.R”
+“02Analysis.R”
+
+##	Data documentation
+Ensure that there is appropriate documentation at level of project (living project document and protocol), file (living project document +/- README - explanation of the files in your folder, how they relate to each other) and variable/item (README files containing explanation of columns and data fields in a spreadsheet). The documentation should enable you and other users to be understand the steps in your systematic review and reproduce it at a future date.
+
+## Version control using Github for programming components
+For SR projects involving programming, maintain at least one active Github repository per project on [camaradesuk](https://github.com/camaradesuk/) with scripts and version control. Include the Github repository url in the living project document. Access can be set to private. (NB: be careful with sensitive information when uploading to github. Store any configuration details separately, such as in a “configure.R” file, and do not upload this to github)
+
+
+## Further reading
+[MANTRA](https://mantra.ed.ac.uk/): Research Data Management Training free online course by University of Edinburgh 
