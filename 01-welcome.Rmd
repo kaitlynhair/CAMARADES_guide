@@ -10,7 +10,7 @@ Here is an ever-growing list of resources you might find useful.
  `r icons::fontawesome("graduation-cap", style = "solid")` Course: Edinburgh University Research Optimisation Course: course on improving preclinical research 
 
 1. Log in to Learn 
-2. Click on ‘self-enrol’ (available on top right of the screen)
+2. Click on ‘self-enrol’ (top right of the screen)
 3. Scroll down to Research Improvement 
 4. Click on EUROC (Edinburgh University Research Optimisation Course)
 
