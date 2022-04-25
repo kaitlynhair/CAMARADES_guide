@@ -17,7 +17,7 @@ jobs:
       - name: Install rmarkdown
         run: Rscript -e 'install.packages(c("rmarkdown","bookdown"))'
      - name: Install icons
-        run: Rscript -e 'install.packages(c("icons"))'
+        run: Rscript -e 'remotes::install_github("mitchelloharawild/icons")'
      - name: Render Book
         run: Rscript -e 'bookdown::render_book("index.Rmd")'
       - uses: actions/upload-artifact@v1
