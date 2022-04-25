@@ -11,17 +11,19 @@ link-citations: yes
 github-repo: rstudio/bookdown-demo
 description: "This is the CAMARADES Edinburgh lab guide."
 ---
+```{r include=FALSE}
+remotes::install_github("mitchelloharawild/icons")
+```
+
 # Welcome
 
 The Collaborative Approach to Meta Analysis and Review of Animal Experimental Studies (CAMARADES) research group was founded in 2004 by Malcolm Macleod and David Howells, aiming to address translational failures in preclinical stroke research using systematic review and meta-analysis. Since then, the CAMARADES have broadened their scope to other disease models such as neuropathic pain and Alzheimer's disease.
 
 The CAMARADES has pioneered in the field of preclinical systematic review, and in addition to carrying out their own research, provide a supportive framework for other research groups performing systematic review.
 
-The team collaborates with researchers all around the world, including meta-researchers, preclinical researchers, clinicians, pharmaceutical companies, publishers, funders and policymakers.
-
-```{r echo=FALSE}
+The team collaborates with researchers all around the world, including meta-researchers, preclinical researchers, clinicians, pharmaceutical companies, publishers, funders and policymakers.```{r echo=FALSE}
 knitr::include_graphics("images/camarades_logo.jpg")
-```
+
 
 ## Our missions
 - Improve the validity of preclinical research  
