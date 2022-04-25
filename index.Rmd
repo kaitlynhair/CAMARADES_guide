@@ -23,9 +23,11 @@ The Collaborative Approach to Meta Analysis and Review of Animal Experimental St
 
 The CAMARADES has pioneered in the field of preclinical systematic review, and in addition to carrying out their own research, provide a supportive framework for other research groups performing systematic review.
 
-The team collaborates with researchers all around the world, including meta-researchers, preclinical researchers, clinicians, pharmaceutical companies, publishers, funders and policymakers.```{r echo=FALSE}
-knitr::include_graphics("images/camarades_logo.jpg")
+The team collaborates with researchers all around the world, including meta-researchers, preclinical researchers, clinicians, pharmaceutical companies, publishers, funders and policymakers.
 
+```{r}
+knitr::include_graphics("images/camarades_logo.jpg")
+```
 
 ## Our missions
 - Improve the validity of preclinical research  
