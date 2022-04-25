@@ -1,3 +1,80 @@
-# Welcome
+# Getting Started
 
-Here is a review of existing methods..
+Here is an ever-growing list of resources you might find useful.
+
+## CAMARADES 
+
+ `r icons::fontawesome("laptop", style = "solid")` Head to the [CAMARADES website](https://www.ed.ac.uk/clinical-brain-sciences/research/camarades/about-camarades) for more information about our reseach projects and collaborations.
+
+## Translational failure 
+
+ `r icons::fontawesome("graduation-cap", style = "solid")` Course: Edinburgh University Research Optimisation Course: course on improving preclinical research 
+
+1. Log in to Learn 
+2. Click on ‘self-enrol’ (available on top right of the screen)
+3. Scroll down to Research Improvement 
+4. Click on EUROC (Edinburgh University Research Optimisation Course)
+
+## Why systematic reviews?
+
+ `r icons::fontawesome("file", style = "solid")` [Publication](https://pubmed.ncbi.nlm.nih.gov/24549183/): Sena ES, Currie GL, McCann SK, Macleod MR, Howells DW. Systematic reviews and meta-analysis of preclinical studies: why perform them and how to appraise them critically. J Cereb Blood Flow Metab. 2014 May;34(5):737-42.
+
+## Using SyRF
+
+ `r icons::fontawesome("toolbox", style = "solid")` SyRF is our in-house systematic review platform. We use it for screening for inclusion and extracting information and data from publications. [Head to the SyRF website](syrf.org.uk) 
+
+ `r icons::fontawesome("toolbox", style = "solid")` SyRF [user guide](https://assets.syrf.org.uk/guides/SyRF_User_Guide.pdf)
+
+ 
+## Systematic review methodology
+ `r icons::fontawesome("mug-hot", style = "solid")` CAMARADES Berlin [Wiki](http://camarades.de/ - wiki for preclinical SRs) page for  preclinical systematic reviews
+
+ `r icons::fontawesome("video", style = "solid")`Systematic review [introductory videos](https://www.ed.ac.uk/clinical-brain-sciences/research/camarades/tools-resources/sr-animal-studies) by CAMARADES Edinburgh
+
+ `r icons::fontawesome("laptop-code", style = "solid")` CAMRADES Berlin Introductory [Workshop](https://osf.io/4zqhe) on preclinical systematic reviedws
+
+
+## Data skills 
+
+ `r icons::fontawesome("laptop-code", style = "solid")` Online [self study materials](https://www.ed.ac.uk/information-services/help-consultancy/is-skills/programmes-courses-and-toolkits/development-programmes/data-skills) with different pathways for varying levels of prior knowledge (Excel, R, Python, SQL).
+
+ 
+## R 
+
+R is a programming language we use day-to-day in CAMARADES to develop evidence synthesis pipelines, automate steps of the review process, and to perform analyses. 
+
+ `r icons::fontawesome("mug-hot", style = "solid")` [Get started with R](https://rstudio-education.github.io/hopr/starting.html)
+
+ `r icons::fontawesome("toolbox", style = "solid")` [Download R](https://www.rstudio.com/products/rstudio/download/#download)
+
+ `r icons::fontawesome("graduation-cap", style = "solid")` [Download Swirl](https://swirlstats.com/students.html)- an interactive intro course that also goes through the steps of installing R and RStudio. 
+
+ `r icons::fontawesome("video", style = "solid")` Improve your workflow for reproducible science [weblecture](https://www.youtube.com/watch?v=JA-vLsN-sic) (1hr, 51m) - an intro to using R reproducibly by using tools like RMarkdown, Git and GitHub 
+
+ `r icons::fontawesome("book-open", style = "solid")` Online [book](https://r4ds.had.co.nz/) - using R for Data Science
+ 
+ `r icons::fontawesome("toolbox", style = "solid")` RStudio [cheatsheets](https://www.rstudio.com/resources/cheatsheets/)
+
+ `r icons::fontawesome("toolbox", style = "solid")` [Tidyverse](https://www.tidyverse.org/): collection of R packages for data science  
+ 
+ `r icons::fontawesome("book-open", style = "solid")` Online [book](https://bookdown.org/yihui/rmarkdown/) - use R Markdown to weave narrative text and code and produce parameterised/reproducible documents (html/pdf/word).
+
+ `r icons::fontawesome("toolbox", style = "solid")` [R Shiny](https://mastering-shiny.org/) : create interactive web applications using R  
+
+ `r icons::fontawesome("toolbox", style = "solid")` [Git/Github](https://happygitwithr.com/) -learn about version control using Git and Github
+
+## Meta analysis 
+
+ `r icons::fontawesome("file", style = "solid")` [Methods paper](https://www.sciencedirect.com/science/article/pii/S016502701300321X?via%3Dihub#eq0005) on meta analysis including statistical tests and formulas required: 
+
+ `r icons::fontawesome("book-open", style = "solid")` Online [book](https://bookdown.org/MathiasHarrer/Doing_Meta_Analysis_in_R/) - Doing Meta Analysis in R by Mathias Harrer
+
+ `r icons::fontawesome("book-open", style = "solid")` Borenstein, M., Hedges, L. V., Higgins, J. P., & Rothstein, H. R. (2021). Introduction to meta-analysis. John Wiley & Sons. (Electronic and hard copies available from UoE library) 
+
+## Data Visualisation 
+
+ `r icons::fontawesome("toolbox", style = "solid")` [Data visualisation inspiration](https://r-graph-gallery.com/index.html) using R - a gallery of R visualisations
+
+ `r icons::fontawesome("toolbox", style = "solid")` [Helpful guide](https://www.data-to-viz.com/) on which visualisations to use and how to create them
+
+ 
