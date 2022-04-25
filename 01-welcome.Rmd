@@ -1,5 +1,8 @@
-# Getting Started
+```{r include=FALSE}
+library(icons)
+```
 
+# Getting Started
 Here is an ever-growing list of resources you might find useful.
 
 ## CAMARADES 
