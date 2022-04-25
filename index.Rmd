@@ -12,9 +12,7 @@ github-repo: rstudio/bookdown-demo
 description: "This is the CAMARADES Edinburgh lab guide."
 ---
 ```{r include=FALSE}
-install.packages("devtools")
-install.packages("remotes")
-remotes::install_github("mitchelloharawild/icons")
+install.packages("fontawesome")
 ```
 
 # Welcome
