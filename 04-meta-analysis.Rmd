@@ -1,0 +1,17 @@
+# Meta-analysis
+
+## Background
+
+## Cleaning SyRF data
+
+## Combine effect sizes
+
+### Which method is best?
+
+### Visualise effects
+
+### Interpreting forest plots
+
+## Explore heterogeneity
+
+## Small study effects
