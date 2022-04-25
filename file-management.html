@@ -149,7 +149,14 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <li class="chapter" data-level="2.8" data-path="getting-started.html"><a href="getting-started.html#meta-analysis"><i class="fa fa-check"></i><b>2.8</b> Meta analysis</a></li>
 <li class="chapter" data-level="2.9" data-path="getting-started.html"><a href="getting-started.html#data-visualisation"><i class="fa fa-check"></i><b>2.9</b> Data Visualisation</a></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="file-management.html"><a href="file-management.html"><i class="fa fa-check"></i><b>3</b> File management</a></li>
+<li class="chapter" data-level="3" data-path="file-management.html"><a href="file-management.html"><i class="fa fa-check"></i><b>3</b> File management</a><ul>
+<li class="chapter" data-level="3.1" data-path="file-management.html"><a href="file-management.html#standardise-folder-management-for-each-project."><i class="fa fa-check"></i><b>3.1</b> Standardise folder management for each project.</a></li>
+<li class="chapter" data-level="3.2" data-path="file-management.html"><a href="file-management.html#maintain-a-living-project-document-per-project"><i class="fa fa-check"></i><b>3.2</b> Maintain a living project document per project</a></li>
+<li class="chapter" data-level="3.3" data-path="file-management.html"><a href="file-management.html#follow-naming-conventions"><i class="fa fa-check"></i><b>3.3</b> Follow naming conventions</a></li>
+<li class="chapter" data-level="3.4" data-path="file-management.html"><a href="file-management.html#data-documentation"><i class="fa fa-check"></i><b>3.4</b> Data documentation</a></li>
+<li class="chapter" data-level="3.5" data-path="file-management.html"><a href="file-management.html#version-control-using-github-for-programming-components"><i class="fa fa-check"></i><b>3.5</b> Version control using Github for programming components</a></li>
+<li class="chapter" data-level="3.6" data-path="file-management.html"><a href="file-management.html#further-reading"><i class="fa fa-check"></i><b>3.6</b> Further reading</a></li>
+</ul></li>
 <li class="chapter" data-level="4" data-path="systematic-review.html"><a href="systematic-review.html"><i class="fa fa-check"></i><b>4</b> Systematic review</a><ul>
 <li class="chapter" data-level="4.1" data-path="systematic-review.html"><a href="systematic-review.html#systematic-searching"><i class="fa fa-check"></i><b>4.1</b> Systematic searching</a><ul>
 <li class="chapter" data-level="4.1.1" data-path="systematic-review.html"><a href="systematic-review.html#developing-search-terms"><i class="fa fa-check"></i><b>4.1.1</b> Developing search terms</a></li>
@@ -203,7 +210,55 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
             <section class="normal" id="section-">
 <div id="file-management" class="section level1 hasAnchor">
 <h1><span class="header-section-number">Chapter 3</span> File management<a href="file-management.html#file-management" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>We aim for data organisation to be clear and as consistent as possible between projects – to help with locating files, prevent data loss, and ensure that data can be findable, accessible, and used/re-used (both by yourself and others in the team). This is especially important for living systematic reviews and projects which may be transferred from one owner to another.</p>
+<p>To ensure consistent data organisation across CAMARADES projects, we recommend following the principles below:</p>
+<div id="standardise-folder-management-for-each-project." class="section level2 hasAnchor">
+<h2><span class="header-section-number">3.1</span> Standardise folder management for each project.<a href="file-management.html#standardise-folder-management-for-each-project." class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li><p>All CAMARADES Edinburgh SR Projects should use <a href="https://uoe.sharepoint.com/sites/Camarades125">CAMARADES SharePoint</a> as their primary location for data storage.</p></li>
+<li><p>Each SR project should have one parent folder within <a href="https://uoe.sharepoint.com/:f:/r/sites/Camarades125/Shared%20Documents/SystematicReviewProjects?csf=1&amp;web=1&amp;e=84D2fv">SystematicReviewProjects</a> folder in Documents. Use the folder template in <a href="https://uoe.sharepoint.com/:f:/r/sites/Camarades125/Shared%20Documents/SystematicReviewProjects/Administration/SRProjectFolderTemplate?csf=1&amp;web=1&amp;e=fOphe9">SRProjectFolderTemplate</a> to organise your folders and files. Go to <a href="https://uoe.sharepoint.com/:f:/r/sites/Camarades125/Shared%20Documents/SystematicReviewProjects/Administration?csf=1&amp;web=1&amp;e=cXh8bh">SystematicReviewProjects &gt; Administration</a>, click on the ⋮ next to SRProjectTemplate and select “Copy to”. Navigate to CAMARADES &gt; Documents &gt; SystematicReviewProjects and click “Copy Here”. Go back to <a href="https://uoe.sharepoint.com/:f:/r/sites/Camarades125/Shared%20Documents/SystematicReviewProjects?csf=1&amp;web=1&amp;e=84D2fv">SystematicReviewProjects</a> and rename the copied folder to your project name in <a href="https://techterms.com/definition/pascalcase">PascalCase</a>.</p></li>
+<li><p>The template folder contains subfolders to manage your files according to components of the systematic review process (e.g. 01Protocol, 02DatabaseSearch etc). For folders where there could be multiple versions of the same file (e.g. protocol), store the active version in the main folder, and previous versions in a folder named “archive” with files named using the convention specified in section <a href="##%20Follow%20naming%20conventions">3.3</a>.</p></li>
+<li><p>Structure for folders involving R programming:</p>
+<ul>
+<li>“data” folder – store all your data used in your scripts here and read from it.</li>
+<li>“output” folder – write files to this folder; you may subcategorise by type of files (e.g., csv, figures), or by date created<br />
+</li>
+<li>Main script .R file(s); annotate steps in your R scripts so that others can understand and use it. If writing functions, for each function, annotate (i) purpose of the function, (ii) input variables (including type of variable), (iii) what does the function returns.</li>
+<li>If there are multiple .R files within a folder, include a README file that summarises purpose for each script.</li>
+</ul></li>
+<li><p>Store .Rproj (and an “R” folder (optional) to store ‘configure.R’ files containing configuration info shared across scripts for the project +/- scripts containing functions which will be called by different scripts across the project) in the parent directory.</p></li>
+</ul>
+</div>
+<div id="maintain-a-living-project-document-per-project" class="section level2 hasAnchor">
+<h2><span class="header-section-number">3.2</span> Maintain a living project document per project<a href="file-management.html#maintain-a-living-project-document-per-project" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Use the template located within <a href="https://uoe.sharepoint.com/:w:/r/sites/Camarades125/Shared%20Documents/SystematicReviewProjects/Administration/SRProjectFolderTemplate/00Master/CAMARADESSystematicReviewLivingDocument.docx?d=w70bbf8d9b5c043528696aa8ebc1014db&amp;csf=1&amp;web=1&amp;e=gSws7t">SRProjectTemplate &gt; 00Master &gt; CAMARADESSystematicReviewLivingDocument.docx</a> to document project level metadata. Save a copy of the document as YourProjectNameLivingDocument.docx (e.g. “StrokeInVivoRoBLivingDocument.docx”) and store this within your “00Master” folder. Populate the fields in the document and keep this up to date. Do not alter the column names of the table on the first page. Keep this document up-to-date and store a current copy of the document in <a href="https://osf.io/zefa9/">CAMARADES Edinburgh Systematic Review Projects Organisation OSF repository</a>; drag and drop the file into the “LivingDocument” folder). We will programmatically extract data from the table to update the <a href="https://osf.io/smr34/">CAMARADES SR project overview summary table</a>.</p>
+</div>
+<div id="follow-naming-conventions" class="section level2 hasAnchor">
+<h2><span class="header-section-number">3.3</span> Follow naming conventions<a href="file-management.html#follow-naming-conventions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Names should be concise and provide context (avoid generic names)</li>
+<li>Use <a href="https://techterms.com/definition/pascalcase">PascalCase</a> (where the first letter of each compound word in a variable is capitalised)</li>
+<li>Do not use special characters or spaces. Use PascalCase; dashes or underscores can be used.</li>
+<li>Where dates are important, or there would be multiple versions of a document, use YYYY-MM-DDYourProjectNameFileNameVersionNumber for name. For example,
+“2022-03-22SRProjectProtocolV1.docx”. This enables easy chronological sorting of files.</li>
+<li>Where files are used sequentially in a specific order, for example R script files used in a workflow, add a number prefix to the filename. For example,
+“01CleanData.R”
+“02Analysis.R”</li>
+</ul>
+</div>
+<div id="data-documentation" class="section level2 hasAnchor">
+<h2><span class="header-section-number">3.4</span> Data documentation<a href="file-management.html#data-documentation" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Ensure that there is appropriate documentation at level of project (living project document and protocol), file (living project document +/- README - explanation of the files in your folder, how they relate to each other) and variable/item (README files containing explanation of columns and data fields in a spreadsheet). The documentation should enable you and other users to be understand the steps in your systematic review and reproduce it at a future date.</p>
+</div>
+<div id="version-control-using-github-for-programming-components" class="section level2 hasAnchor">
+<h2><span class="header-section-number">3.5</span> Version control using Github for programming components<a href="file-management.html#version-control-using-github-for-programming-components" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>For SR projects involving programming, maintain at least one active Github repository per project on <a href="https://github.com/camaradesuk/">camaradesuk</a> with scripts and version control. Include the Github repository url in the living project document. Access can be set to private. (NB: be careful with sensitive information when uploading to github. Store any configuration details separately, such as in a “configure.R” file, and do not upload this to github)</p>
+</div>
+<div id="further-reading" class="section level2 hasAnchor">
+<h2><span class="header-section-number">3.6</span> Further reading<a href="file-management.html#further-reading" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p><a href="https://mantra.ed.ac.uk/">MANTRA</a>: Research Data Management Training free online course by University of Edinburgh</p>
 
+</div>
 </div>
             </section>
 

@@ -12,6 +12,12 @@ r
 meta-analysis
 data-visualisation
 file-management
+standardise-folder-management-for-each-project.
+maintain-a-living-project-document-per-project
+follow-naming-conventions
+data-documentation
+version-control-using-github-for-programming-components
+further-reading
 systematic-review
 systematic-searching
 developing-search-terms
