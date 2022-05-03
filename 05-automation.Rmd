@@ -3,6 +3,71 @@
 ## Background
 
 ## Automating searches
+
+Install and load the following packages to use the simplified searching functions we have developed. 
+```{r}
+library(devtools)
+install_github("kaitlynhair/scopusAPI")
+install_github("kaitlynhair/rwos")
+library(scopusAPI)
+library(rwos)
+library(plyr)
+library(dplyr)
+library(rcrossref)
+library(kableExtra)
+```
+
+### Web of Science
+
+Write a query
+
+```{r}
+library(devtools)
+install_github("kaitlynhair/rwos")
+
+wos_query <- 'TS=(coronavirus OR "corona virus" OR coronavirinae OR coronaviridae OR betacoronavirus OR covid OR covid19 OR "covid 19" OR nCoV OR "CoV 2" OR CoV2 OR sarscov2 OR 2019nCoV OR "novel CoV" OR "wuhan virus") OR TS=((wuhan OR hubei OR huanan) AND ("severe acute respiratory" OR pneumonia) AND (outbreak)) OR TI=(coronavirus OR "corona virus" OR coronavirinae OR coronaviridae OR betacoronavirus OR covid OR covid19 OR "covid 19" OR nCoV OR "CoV 2" OR CoV2 OR sarscov2 OR 2019nCoV OR "novel CoV" OR "wuhan virus") OR TI=((wuhan OR hubei OR huanan) AND ("severe acute respiratory" OR pneumonia) AND (outbreak))'
+```
+
+Clarification on API:
+If you have institituional access to the WoS Lite API, you can use this function to import citations programmatically. We recommend connecting to your institutional VPN and trying the code below - if it works, you have access. 
+
+Searching in R:
+The **search_wos()** function allows you to unput a search query and timespan. Input the timespan you are interested in retrieving new records from e.g. "2week", "1year", "5month". A key limitation is that this function cannot currently pull in abstract information.
+
+```{r}
+wos_results <- search_wos(wos_query, timespan = "1day")
+
+wos_results[1:3,] %>%
+kbl() %>%
+  kable_styling()
+
+```
+
+### Scopus  
+
+Writing a Scopus query
+
+```{r}
+scopus_query <- "(coronavir*  OR  corona+virus* OR  betacoronavir*  OR  covid19  OR  covid+19  OR  ncov  OR  cov  2  OR  cov2  OR  sarscov2  OR  2019ncov  OR  2019+novel+coronavirus*  OR  2019+novel+CoV  OR  wuhan+virus* )  OR  ((wuhan  OR  hubei  OR  huanan)  AND  (severe+acute+respiratory  OR  pneumonia* )  AND  outbreak*)"
+```
+
+Searching Scopus:  
+The **search_scopus()** function allows you to unput a search query, API key, and a maximal number of records to retrieve. At present, there is no method of limiting a scopus search by date. Instead, we recommend working out how many new records are published (on average) between one search and another search. The retirved search is **ordered by date** and the **retMax** parameter in the function allows you to set the number of records you would like to retrieve. If you set it at 100, you will therefore retrieve the latest 100 records. 
+
+```{r}
+scopus_results <- search_scopus(string = scopus_query, api_key=Sys.getenv("SCOPUS_API_TOKEN"), retMax=10)
+
+scopus_results[1:3,] %>%
+kbl() %>%
+  kable_styling()
+```
+
+### Combining searches
+```{r}
+combined_search <- rbind.fill(wos_results, scopus_results)
+```
+
+
 ## Automating deduplication
 ## Automating screening
 ## Automating data extraction
