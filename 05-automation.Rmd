@@ -14,7 +14,7 @@ Install / load these packages which are required for multiple functions describe
 knitr::opts_chunk$set(warning = FALSE, message=FALSE)
 ```
 ```{r}
-install.packages(c("dplyr", "markdown", "kableExtra", "plyr"))
+install.packages(c("devtools", "dplyr", "markdown", "kableExtra", "plyr"))
 library(dplyr)
 library(markdown)
 library(kableExtra)
