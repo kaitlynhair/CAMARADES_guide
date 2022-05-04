@@ -95,7 +95,7 @@ query <- "\"Alzheimer Disease\" [All Fields] OR \"alzheimers disease\"[All Field
 
 3. Run search
 ```{r}
-pubmed_search <- EUtilsSummary(query, retmax=5000, mindate = "2022/05/03", maxdate="2022/05/03",  type="esearch", db="pubmed")
+pubmed_search <- EUtilsSummary(query, retmax=50, mindate = "2022/05/03", maxdate="2022/05/03",  type="esearch", db="pubmed")
 
 summary(pubmed_search)
 ```
