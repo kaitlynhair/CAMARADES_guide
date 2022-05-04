@@ -10,9 +10,11 @@ In this chapter, you will find example code to obtain citation data automaticall
 
 ### Load R packages
 Install / load these packages which are required for multiple functions described below
-```{r}
+```{r include = FALSE}
 knitr::opts_chunk$set(warning = FALSE, message=FALSE)
-  
+```
+```{r}
+install.packages(c("dplyr", "markdown", "kableExtra", "plyr"))
 library(dplyr)
 library(markdown)
 library(kableExtra)
@@ -21,7 +23,7 @@ library(plyr)
 
 ### Web of Science Search
 
-1. Install the rwos package from GitHub
+**STEP 1. Install the rwos package from GitHub**
 Note that you may also need to install the `devtools` package if not yet installed
 
 ```{r}
@@ -30,23 +32,25 @@ install_github("kaitlynhair/rwos")
 library("rwos")
 ```
 
-2. Write a query 
-Write a query the same way as you would do on the web page but with additional single quotation marks ' around it. Make this query an object. 
+**STEP 2. Write a WoS query**
+Write a query the same way as you would do on the web page but with additional single quotation marks ' around it. Make this query an object. See the example below:
+
 ```{r}
 wos_query <- 'TS=(coronavirus OR "corona virus" OR coronavirinae OR coronaviridae OR betacoronavirus OR covid OR covid19 OR "covid 19" OR nCoV OR "CoV 2" OR CoV2 OR sarscov2 OR 2019nCoV OR "novel CoV" OR "wuhan virus") OR TS=((wuhan OR hubei OR huanan) AND ("severe acute respiratory" OR pneumonia) AND (outbreak)) OR TI=(coronavirus OR "corona virus" OR coronavirinae OR coronaviridae OR betacoronavirus OR covid OR covid19 OR "covid 19" OR nCoV OR "CoV 2" OR CoV2 OR sarscov2 OR 2019nCoV OR "novel CoV" OR "wuhan virus") OR TI=((wuhan OR hubei OR huanan) AND ("severe acute respiratory" OR pneumonia) AND (outbreak))'
 ```
 
-3. Search
+**STEP 3. Perform the search**
 If you have institituional access to the WoS Lite API, you can use this function to import citations programmatically. We recommend connecting to your institutional VPN and trying the code below - if it works, you have access. 
 
-The **search_wos()** function allows you to unput a search query and timespan. Input the timespan you are interested in retrieving new records from e.g. "2week", "1year", "5month". A key limitation is that this function cannot currently pull in abstract information.
+The `search_wos()` function allows you to unput a search query and timespan. Input the timespan you are interested in retrieving new records from e.g. "2week", "1year", "5month". A key limitation is that this function cannot currently pull in abstract information.
 
 ```{r}
 wos_results <- search_wos(wos_query, timespan = "1day")
 ```
 
-4. See your results
-Take a quick look at the resulting dataframe
+**STEP 4. Glimpse your results**
+Take a quick look at the structure of the resulting dataframe
+
 ```{r}
 wos_results %>%
   glimpse()
@@ -54,8 +58,8 @@ wos_results %>%
 
 ### Scopus Search
 
-1. Install the ScopusAPI package from GitHub
-Note that you may also need to install the `devtools` package if not yet installed
+**STEP 1. Install the scopusAPI package from GitHub**
+Note that you may also need to install the `devtools` package if not yet installed. This package is a modified version of an existing package which uses the scopus API to retrieve citation data. 
 
 ```{r}
 library(devtools)
@@ -63,61 +67,68 @@ install_github("kaitlynhair/scopusAPI")
 library(scopusAPI)
 ```
  
-2. Write a query
+**STEP 2. Write a scopus query**
+Create a query object similar to the example below. 
+
 ```{r}
 scopus_query <- "(coronavir*  OR  corona+virus* OR  betacoronavir*  OR  covid19  OR  covid+19  OR  ncov  OR  cov  2  OR  cov2  OR  sarscov2  OR  2019ncov  OR  2019+novel+coronavirus*  OR  2019+novel+CoV  OR  wuhan+virus* )  OR  ((wuhan  OR  hubei  OR  huanan)  AND  (severe+acute+respiratory  OR  pneumonia* )  AND  outbreak*)"
 ```
 
-3. Search the database
-The **search_scopus()** function allows you to unput a search query, API key, and a maximal number of records to retrieve. At present, there is no method of limiting a scopus search by date. Instead, we recommend working out how many new records are published (on average) between one search and another search. The retirved search is **ordered by date** and the **retMax** parameter in the function allows you to set the number of records you would like to retrieve. If you set it at 100, you will therefore retrieve the latest 100 records. 
+**STEP 3. Peform the search**
+The `search_scopus()` function allows you to unput a search query, API key, and a maximal number of records to retrieve. 
+
+Note that for the `Sys.getenv("SCOPUS_API_TOKEN")` to work, you need to have set this as an environment variable. To do this, use the function `Sys.setenv()`. For example `("SCOPUS_API_TOKEN" = "XXXXXXX")`. 
+
+At present, there is no method of limiting a scopus search by date. Instead, we recommend working out how many new records are published (on average) between one search and another search. The retirved search is **ordered by date** and the **retMax** parameter in the function allows you to set the number of records you would like to retrieve. If you set it at 100, you will therefore retrieve the latest 100 records. 
 
 ```{r}
 scopus_results <- search_scopus(string = scopus_query, api_key=Sys.getenv("SCOPUS_API_TOKEN"), retMax=10)
 ```
 
-4. Check your results!
+**STEP 4. Glimpse your results
 ```{r}
 scopus_results %>%
    glimpse()
 ```
 
 ### PubMed Search
-1. Load package
+**STEP 1. Load the RISmed package**
 ```{r}
 install.packages("RISmed")
 library(RISmed)
 ```
 
-2. Write a query
+**STEP 2. Write a pubmed query**
+Create a query object as shown in the example below. Note that you must use a backslash (\) to escape the quotation marks. 
 ```{r}
 query <- "\"Alzheimer Disease\" [All Fields] OR \"alzheimers disease\"[All Fields] OR alzheimer*[All Fields]"
 ```
 
-3. Run search
+**STEP 3. Perform the search**
+Using the `EUtilsSummary()` function, run the query. The `retmax` argument determines the number of results retrieved, while `mindate` and `maxdate` allow for date filtering. Use the `summary` function 
 ```{r}
 pubmed_search <- EUtilsSummary(query, retmax=50, mindate = "2022/05/03", maxdate="2022/05/03",  type="esearch", db="pubmed")
-
 summary(pubmed_search)
-```
 
-4. 
+```
+Next, use the `EUtilsGet()` function to retrieve the citations found in the search.
 ```{r}
 records<- EUtilsGet(pubmed_search)
 ```
 
-5. Format authors
+**STEP 4. Additional formatting steps**
+The author names are split into 2 columns (LastName and Initials). To reformat this into a more standard format with the authors listed, create a vector for first author (author1) and for all the authors. Then, run a `for()` loop across the length of the authors column. For each author, a temporary character object `tmp` by pasting the author's last name followed by a comma and initials. Create a second temporary character `tmp2` and collapse the authors together using a semicolon. Use `append()` to add each new `tmp2` to the authors vect
+
 ```{r}
 authors<-vector()
-author1<-vector()
 for(n in 1:length(records@Author)){
   tmp<-paste0(records@Author[[n]]$LastName,", ",records@Author[[n]]$Initials)
   tmp2<-paste(tmp, collapse="; ")
   authors<-append(authors,tmp2)
-  author1<-append(author1,records@Author[[n]]$LastName[1])
 }
 ```
 
-6. Format dataframe
+Remame the column names of to be consistent with the rest of the search dataframes. 
 ```{r}
 pubmed_results <- data.frame('authors'=authors, 'title'=ArticleTitle(records),                          'abstract'=AbstractText(records),'journal'=MedlineTA(records), 
                           'pages'=MedlinePgn(records),
@@ -125,21 +136,21 @@ pubmed_results <- data.frame('authors'=authors, 'title'=ArticleTitle(records),  
                           'year'=YearPubmed(records),
                           'pmid'=PMID(records), 'doi'=ELocationID(records), 
                           'url'=paste0("https://www.ncbi.nlm.nih.gov/pubmed/",
-                                        PMID(records)), 'author1'=author1) 
+                                        PMID(records))) 
 
 ```
 
-7. See your data
+**STEP 5. Glimpse your data
 ```{r}
 pubmed_results %>% 
   glimpse()
 ```
 
 ### Combining searches
+To combine several searches together, use the `rbind.fill()` function - this allows you to bind together dataframes with different columns. Note that most of the key metadata should have the same names. 
 ```{r}
 combined_search <- rbind.fill(wos_results, scopus_results, pubmed_results)
 ```
-
 
 ## Automating deduplication
 ## Automating screening
