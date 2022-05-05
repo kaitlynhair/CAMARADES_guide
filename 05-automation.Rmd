@@ -94,7 +94,7 @@ scopus_results %>%
 ### PubMed Search
 **STEP 1. Load the RISmed package**
 ```{r}
-install.packages("RISmed")
+install_github("kaitlynhair/RISmed")
 library(RISmed)
 ```
 
@@ -116,31 +116,7 @@ Next, use the `EUtilsGet()` function to retrieve the citations found in the sear
 records<- EUtilsGet(pubmed_search)
 ```
 
-**STEP 4. Additional formatting steps**
-The author names are split into 2 columns (LastName and Initials). To reformat this into a more standard format with the authors listed, create a vector for first author (author1) and for all the authors. Then, run a `for()` loop across the length of the authors column. For each author, a temporary character object `tmp` by pasting the author's last name followed by a comma and initials. Create a second temporary character `tmp2` and collapse the authors together using a semicolon. Use `append()` to add each new `tmp2` to the authors vect
-
-```{r}
-authors<-vector()
-for(n in 1:length(records@Author)){
-  tmp<-paste0(records@Author[[n]]$LastName,", ",records@Author[[n]]$Initials)
-  tmp2<-paste(tmp, collapse="; ")
-  authors<-append(authors,tmp2)
-}
-```
-
-Remame the column names of to be consistent with the rest of the search dataframes. 
-```{r}
-pubmed_results <- data.frame('authors'=authors, 'title'=ArticleTitle(records),                          'abstract'=AbstractText(records),'journal'=MedlineTA(records), 
-                          'pages'=MedlinePgn(records),
-                          'volume'=Volume(records),'issue'=Issue(records),
-                          'year'=YearPubmed(records),
-                          'pmid'=PMID(records), 'doi'=ELocationID(records), 
-                          'url'=paste0("https://www.ncbi.nlm.nih.gov/pubmed/",
-                                        PMID(records))) 
-
-```
-
-**STEP 5. Glimpse your data
+**STEP 4. Glimpse your data
 ```{r}
 pubmed_results %>% 
   glimpse()
